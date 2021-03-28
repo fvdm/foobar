@@ -1,1 +1,5 @@
-console.log ('I am a file');
+modules.exports = {
+  foo: () => {
+    console.log ('bar');
+  },
+};
