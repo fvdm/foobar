@@ -1,4 +1,4 @@
-modules.exports = {
+module.exports = {
   foo: () => {
     console.log ('bar');
   },
