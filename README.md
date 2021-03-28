@@ -1,3 +1,3 @@
 Yada foo
 
-repology
+repology magic
