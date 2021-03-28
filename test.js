@@ -1,4 +1,8 @@
-console.log ('Running the tests');
-setTimeout (() => {
-  console.log ('aaand done');
-}, 5000);
+const dotest = require ('dotest');
+const app = require ('./');
+
+dotest.add ('foo()', test => {
+  test.isObject ('fail', 'module.exports', app).done();
+});
+
+dotest.run ();
