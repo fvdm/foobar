@@ -16,8 +16,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: git version
-    - run: env | grep -E ^GITHUB_
-    - run: npm i
+    - run: git fetch --prune --unshallow
+    - run: npm ci
     - run: npm test
     - run: npm audit
