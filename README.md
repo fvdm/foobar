@@ -1,3 +1,3 @@
 Yada foo
 
-repo
+repology
