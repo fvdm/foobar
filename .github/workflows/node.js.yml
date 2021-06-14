@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: node_lts_versions
-      - uses: msimerson/node-lts-versions@v1.1.1
+        uses: msimerson/node-lts-versions@v1.1.1
     outputs:
       matrix: ${{ steps.node_lts_versions.outputs.lts }}
 
