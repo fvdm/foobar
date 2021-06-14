@@ -8,6 +8,7 @@ on:
 
 jobs:
   lts_versions:
+    name: "Getting LTS versions"
     runs-on: ubuntu-latest
     steps:
       - id: set-matrix
@@ -16,6 +17,7 @@ jobs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
 
   build:
+    name: "Running tests"
     needs: lts_versions
     runs-on: ubuntu-latest
     strategy:
