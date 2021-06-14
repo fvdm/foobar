@@ -4,12 +4,24 @@ on:
     branches: [ main, develop ]
   pull_request:
     branches: [ main, develop ]
+
+
 jobs:
+  provide_node_versions:
+    runs-on: ubuntu-latest
+    steps:
+      - id: node_lts_versions
+      - uses: msimerson/node-lts-versions@v1.1.1
+    outputs:
+      matrix: ${{ steps.node_lts_versions.outputs.lts }}
+
   build:
+    needs: provide_node_versions
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
+        node-version: ${{ needs.provide_node_versions.outputs.matrix }}
+
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
