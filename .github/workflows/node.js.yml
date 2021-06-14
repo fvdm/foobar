@@ -12,6 +12,8 @@ jobs:
     steps:
       - id: node_lts_versions
         uses: msimerson/node-lts-versions@v1.1.1
+    outputs:
+      lts: ${{ steps.node_lts_versions.outputs.lts }}
 
   build:
     needs: provide_node_versions
