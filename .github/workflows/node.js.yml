@@ -16,7 +16,7 @@ jobs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
 
   build:
-    needs: provide_lts_versions
+    needs: lts_versions
     runs-on: ubuntu-latest
     strategy:
       matrix:
