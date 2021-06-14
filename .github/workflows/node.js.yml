@@ -7,20 +7,20 @@ on:
 
 
 jobs:
-  provide_lts_versions:
+  lts_versions:
     runs-on: ubuntu-latest
     steps:
-      - id: lts_versions
-        uses: msimerson/node-lts-versions@v1.1.1
+      - id: set-matrix
+        run: echo "::set-output name=matrix::$(curl -s https://fvdm.com/u/nodejs-lts-versions.json)"
     outputs:
-      lts: ${{ steps.lts_versions.outputs.lts }}
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
 
   build:
     needs: provide_lts_versions
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: ${{ needs.provide_lts_versions.outputs.lts }}
+        node-version: ${{ fromJson(needs.lts_versions.outputs.matrix }}
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
