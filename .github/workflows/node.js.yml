@@ -7,20 +7,20 @@ on:
 
 
 jobs:
-  provide_node_versions:
+  provide_lts_versions:
     runs-on: ubuntu-latest
     steps:
-      - id: node_lts_versions
+      - id: lts_versions
         uses: msimerson/node-lts-versions@v1.1.1
     outputs:
-      lts: ${{ steps.node_lts_versions.outputs.lts }}
+      lts: ${{ steps.lts_versions.outputs.lts }}
 
   build:
-    needs: provide_node_versions
+    needs: provide_lts_versions
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: ${{ needs.provide_node_versions.outputs.lts }}
+        node-version: ${{ needs.provide_lts_versions.outputs.lts }}
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
