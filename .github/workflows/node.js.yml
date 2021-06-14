@@ -17,7 +17,7 @@ jobs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
 
   build:
-    name: "Running tests"
+    name: "Testing on Node.js"
     needs: lts_versions
     runs-on: ubuntu-latest
     strategy:
