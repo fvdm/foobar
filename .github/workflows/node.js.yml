@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: set-matrix
-        run: echo "::set-output name=matrix::$(curl -s https://fvdm.com/u/nodejs-lts-versions.json)"
+        run: echo "::set-output name=matrix::$(curl -s https://raw.githubusercontent.com/fvdm/nodejs-versions/main/lts.json)"
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
 
