@@ -30,4 +30,4 @@ jobs:
     - run: git fetch --prune --unshallow
     - run: npm ci
     - run: npm test
-    - run: npm audit
+    - run: npm audit --production
