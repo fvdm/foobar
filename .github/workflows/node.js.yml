@@ -41,6 +41,7 @@ jobs:
         parallel: true
 
   finish:
+    name: "Finish"
     needs: build
     runs-on: ubuntu-latest
     steps:
