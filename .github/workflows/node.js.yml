@@ -8,16 +8,16 @@ on:
 
 jobs:
   lts_versions:
-    name: "Getting LTS versions"
+    name: "Load LTS versions"
     runs-on: ubuntu-latest
     steps:
       - id: set-matrix
-        run: echo "::set-output name=matrix::$(curl -s https://fvdm.com/u/nodejs-lts-versions.json)"
+        run: echo "::set-output name=matrix::$(curl -s https://raw.githubusercontent.com/fvdm/nodejs-versions/main/lts.json)"
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
 
   build:
-    name: "Testing on Node.js"
+    name: "Node"
     needs: lts_versions
     runs-on: ubuntu-latest
     strategy:
@@ -26,7 +26,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
     - run: git fetch --prune --unshallow
