@@ -11,8 +11,5 @@ jobs:
     name: "print"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: print stuff
-      - run: git fetch --prune --unshallow
       - run: env
       - run: ifconfig
