@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: "print"
+    name: "Build"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,4 +16,4 @@ jobs:
       - run: echo foo > foo.txt
       - run: git add foo.txt
       - run: git commit -m "Added foo.txt"
-      - run: hub pull-request -m "Feature: Foo"
+      - run: hub pull-request -m "Foo"
