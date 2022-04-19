@@ -11,4 +11,9 @@ jobs:
     name: "print"
     runs-on: ubuntu-latest
     steps:
-      - run: hub
+      - uses: actions/checkout@v3
+      - run: git branch foo
+      - run: echo foo > foo.txt
+      - run: git add foo.txt
+      - run: git commit -m "Added foo.txt"
+      - run: hub pull-request -m "Feature: Foo"
