@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - run: git config --global user.email "github.actions@snowplane.net"
+      - run: git config --global user.name "Snowpusher"
       - run: git branch foo
       - run: echo foo > foo.txt
       - run: git add foo.txt
