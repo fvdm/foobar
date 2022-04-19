@@ -11,6 +11,4 @@ jobs:
     name: "print"
     runs-on: ubuntu-latest
     steps:
-      - run: env
-        env: ${{ secrets }}
-      - run: ifconfig
+      - run: hub
