@@ -10,6 +10,8 @@ jobs:
     steps:
       - id: set-matrix
         run: echo "matrix=$(curl -s https://raw.githubusercontent.com/fvdm/nodejs-versions/main/lts-current.json)" >> $GITHUB_OUTPUT
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
 
   build:
     name: "Use var"
