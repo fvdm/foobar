@@ -1,4 +1,4 @@
-name: "Node.js"
+name: "Env from JSON"
 
 on:
   push:
