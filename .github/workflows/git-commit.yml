@@ -1,4 +1,4 @@
-name: "Node.js"
+name: "Git commit"
 on:
   push:
     branches: [ main, develop ]
