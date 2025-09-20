@@ -1,3 +1,3 @@
-export async function foo ( bar ) {
+export function foo ( bar ) {
   return `hello ${bar}`;
 }
