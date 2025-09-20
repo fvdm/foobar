@@ -2,7 +2,7 @@
 
 ## Repository Overview
 
-This is a simple Node.js test repository used by Franklin van de Meent for experimenting with GitHub features and settings. The repository contains a minimal JavaScript module with a basic export structure and comprehensive testing setup.
+This is a simple Node.js test repository used by Franklin for experimenting with GitHub features and settings. The repository contains a minimal JavaScript module with a basic export structure and comprehensive testing setup.
 
 **Repository Details:**
 - **Type**: Node.js module/library
@@ -192,3 +192,5 @@ These instructions have been validated by running all commands and testing failu
 - New dependencies or tools have been added
 
 For routine changes (adding methods, fixing bugs, updating tests), follow the documented patterns and validation steps exactly.
+
+Prefix your commit and PR titles with "[copilot] "
