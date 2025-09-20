@@ -179,7 +179,7 @@ dotest.add('Method newMethod()', test => {
 ```
 
 ### Files to Never Modify
-- `package-lock.json` (unless adding dependencies)
+- `package-lock.json` (generated, ignored by git)
 - `node_modules/` (generated, ignored by git)
 - `coverage/` (generated, ignored by git)
 - `.nyc_output/` (generated, ignored by git)
