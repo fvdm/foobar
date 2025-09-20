@@ -20,7 +20,7 @@ This is a simple Node.js test repository used by Franklin van de Meent for exper
 npm install
 ```
 
-**Note**: Installation takes ~10-15 seconds and may show vulnerability warnings (19 vulnerabilities is normal for this test repository and does not require fixing).
+**Note**: Installation takes ~10-15 seconds and may show vulnerability warnings (these are normal for this test repository and do not require fixing).
 
 ### Available Commands
 
