@@ -1,0 +1,11 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
