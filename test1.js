@@ -10,8 +10,5 @@ module.exports = options => {
 
       return res.text ();
     })
-    .then (text => text.split ('\n').length)
-    .catch (err => {
-      throw err;
-    });
+    .then (text => text.split ('\n').length);
 };
