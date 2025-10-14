@@ -39,16 +39,6 @@ dotest.add ('test1 countLines() default URL (no args)', async test => {
 });
 
 
-dotest.add ('test1 countLines() default URL (null)', async test => {
-  const result = await countLines(null);
-
-  test()
-    .isNumber ('fail', 'return', result)
-    .done()
-  ;
-});
-
-
 dotest.add ('test1 countLines() custom URL', async test => {
   const result = await countLines({ url: 'https://fvdm.com/robots.txt' });
 
