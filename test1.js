@@ -1,6 +1,5 @@
-module.exports = options => {
-  const opts = options || { url: 'https://fvdm.com/robots.txt' };
-  const url = opts.url || 'https://fvdm.com/robots.txt';
+module.exports = (options) => {
+  const { url = 'https://fvdm.com/robots.txt' } = options || {};
 
   return fetch (url)
     .then (res => {
